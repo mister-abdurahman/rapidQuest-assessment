@@ -8,7 +8,9 @@ export const ProgressBar = ({
   percent: string;
   name: string;
 }) => {
-  progressFn();
+  useEffect(function () {
+    progressFn();
+  }, []);
 
   return (
     <div className="bg-white rounded-full relative">
