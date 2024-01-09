@@ -9,7 +9,7 @@ export const MobileBottomBar = () => {
   const incomePath = useMatch("/income");
   const comparePath = useMatch("/compare");
   return (
-    <div className="mt-auto flex justify-between items-center gap-3">
+    <div className="sm:hidden mt-auto flex justify-between items-center gap-3">
       <span>
         <NavLink to={"/"}>
           <BsHouseDoor

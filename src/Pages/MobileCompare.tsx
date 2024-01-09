@@ -6,22 +6,22 @@ import { NavLink } from "react-router-dom";
 
 export const MobileCompare = () => {
   return (
-    <div className="sm:hidden flex flex-col h-screen">
-      <div className="absolute top-6 right-6">
+    <div className="flex flex-col h-screen">
+      <div className="sm:hidden block absolute top-6 right-6">
         <span className="relative">
           <NavLink to={"/"}>
             <GoX className="fill-gray-400 w-6 h-6" />
           </NavLink>
         </span>
       </div>
-      <div className="mt-14 px-6">
+      <div className="sm:hidden block mt-14 px-6">
         <h1 className="font-bold">How do i compare to my peers?</h1>
         <p className="text-xs text-gray-400">
           These numbers represent current goal achievements
         </p>
       </div>
 
-      <div className="px-6">
+      <div className="sm:hidden block px-6">
         <div className="flex flex-col gap-3 mt-3">
           <p className="font-bold text-[.7rem] flex gap-1">
             Age: <span className="text-gray-500 ml-1">Under 30</span>{" "}
@@ -49,7 +49,7 @@ export const MobileCompare = () => {
         </div>
       </div>
 
-      <div className="bg-stone-50 p-4 mt-auto rounded-tr-3xl rounded-tl-3xl">
+      <div className="sm:hidden block bg-stone-50 p-4 mt-auto rounded-tr-3xl rounded-tl-3xl">
         <h1 className="font-bold">Retirement Strategy</h1>
 
         <div className="mt-3">
@@ -86,6 +86,10 @@ export const MobileCompare = () => {
         >
           <NavLink to={"/"}>Update</NavLink>
         </button>
+      </div>
+
+      <div className="hidden sm:block mx-auto text-xl font-bold text-blue-600 underline mt-48">
+        <NavLink to={"/"}>&larr; Go to Dashboard</NavLink>
       </div>
     </div>
   );

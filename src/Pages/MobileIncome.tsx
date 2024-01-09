@@ -5,24 +5,25 @@ import {
 } from "../components/SimpleBarChart";
 import { MobileBottomBar } from "../UI/MobileBottomBar";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
 export const MobileIncome = () => {
   return (
-    <div className="sm:hidden flex flex-col px-7 pt-10 h-screen pb-3 relative">
-      <div className="absolute top-6 right-6">
+    <div className="flex flex-col px-7 pt-10 h-screen pb-3 relative">
+      <div className="sm:hidden block absolute top-6 right-6">
         <span className="relative">
           <span className="absolute top-0 right-0 w-[.3rem] h-[.3rem] rounded-full bg-teal-400"></span>
           <IoMdNotificationsOutline className="fill-gray-400 w-6 h-6" />
         </span>
       </div>
-      <div>
+      <div className="sm:hidden block">
         <h6 className="text-blue-700 font-semibold text-xs">
           Retirement Income
         </h6>
         <h1 className="font-extrabold text-xl">Starting Year 2056</h1>
       </div>
 
-      <div className="flex flex-wrap justify-between gap-8 my-7">
+      <div className="sm:hidden flex flex-wrap justify-between gap-8 my-7">
         <div className="basis-full pb-2 border-b-2 border-teal-600">
           <h1 className="font-extrabold text-xl">$3000,000</h1>
           <p className="text-gray-500 text-xs">My Goal</p>
@@ -37,7 +38,7 @@ export const MobileIncome = () => {
         </div>
       </div>
 
-      <div>
+      <div className="sm:hidden block">
         <h2 className="font-extrabold">Contributions Overtime</h2>
         <div className="flex justify-between my-2">
           <div className="flex flex-col gap-1 ">
@@ -60,6 +61,10 @@ export const MobileIncome = () => {
         <div className="w-full h-56 mt-4">
           <MobileSimpleBarChart />
         </div>
+      </div>
+
+      <div className="hidden sm:block mx-auto text-xl font-bold text-blue-600 underline mt-48">
+        <NavLink to={"/"}>&larr; Go to Dashboard</NavLink>
       </div>
 
       <MobileBottomBar />
