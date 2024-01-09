@@ -1,9 +1,9 @@
 export const progressFn = () => {
   const circularProgress = document.querySelectorAll(".circular-progress");
 
-  Array.from(circularProgress).forEach((progressBar) => {
+  Array.from(circularProgress).forEach((progressBar: any) => {
     const progressValue = progressBar.querySelector(".percentage");
-    const innerCircle = progressBar.querySelector(".inner-circle");
+    const innerCircle: any = progressBar.querySelector(".inner-circle");
     let startValue = 0,
       endValue = Number(progressBar.getAttribute("data-percentage")),
       speed = 50,
@@ -11,14 +11,14 @@ export const progressFn = () => {
 
     const progress = setInterval(() => {
       startValue++;
-      progressValue.textContent = `${startValue}%`;
+      progressValue!.textContent = `${startValue}%`;
       // progressValue.style.color = `${progressColor}`;
 
-      innerCircle.style.backgroundColor = `${progressBar.getAttribute(
+      innerCircle!.style.backgroundColor = `${progressBar.getAttribute(
         "data-inner-circle-color"
       )}`;
 
-      progressBar.style.background = `conic-gradient(${progressColor} ${
+      progressBar!.style.background = `conic-gradient(${progressColor} ${
         startValue * 3.6
       }deg,${progressBar.getAttribute("data-bg-color")} 0deg)`;
       if (startValue === endValue) {
