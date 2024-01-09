@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.recharts-cartesian-axis-tick-value {
+  font-size: 12px;
+}
+
+/* progress bar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --progress-bar-width: 65px;
+  --progress-bar-height: 65px;
+  --font-size: 0.9rem;
+}
+
+.circular-progress {
+  width: var(--progress-bar-width);
+  height: var(--progress-bar-height);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-circle {
+  position: absolute;
+  width: calc(var(--progress-bar-width) - 12px);
+  height: calc(var(--progress-bar-height) - 12px);
+  border-radius: 50%;
+  background-color: lightgrey;
+}
+
+.percentage {
+  position: relative;
+  font-size: var(--font-size);
+  font-weight: 900;
+  color: rgb(0, 0, 0, 0.8);
+}
+
+/* range style */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 150px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 7px;
+  background-image: linear-gradient(#0044ff, #517aec);
+  background-size: 75% 100%;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 679px) {
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 250px;
+  }
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fcfcfc;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background 0.3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
