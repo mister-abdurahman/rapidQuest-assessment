@@ -55,7 +55,13 @@ export const MobileCompare = () => {
         <div className="mt-3">
           <p className="text-xs font-semibold">Employee Contribution</p>
           <div className="flex items-center gap-3 mt-1">
-            <input type="range" min={1} max={20} value={6} />
+            <input
+              onChange={(e) => e.target.value}
+              type="range"
+              min={1}
+              max={20}
+              value={6}
+            />
             <span className="text-xs bg-white font-extrabold p-1 rounded-md">
               12%
             </span>
@@ -64,7 +70,13 @@ export const MobileCompare = () => {
         <div className="mt-3">
           <p className="text-xs font-semibold">Retirement Age</p>
           <div className="flex items-center gap-3 mt-1">
-            <input type="range" min={1} max={20} value={16} />
+            <input
+              onChange={(e) => e.target.value}
+              type="range"
+              min={1}
+              max={20}
+              value={16}
+            />
             <span className="text-xs bg-white font-extrabold py-1 px-2 rounded-md">
               85
             </span>
